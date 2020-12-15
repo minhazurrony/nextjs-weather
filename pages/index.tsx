@@ -20,7 +20,11 @@ const Home = () => {
       </Header>
       <Content className="content">
         <Row gutter={[24, 24]}>
-          <Col md={{ span: 12, offset: 6 }}>
+          <Col
+            xs={{ span: 24 }}
+            md={{ span: 18, offset: 3 }}
+            lg={{ span: 12, offset: 6 }}
+          >
             <Card
               title="Jessore, Khulna, Bangladesh Weather"
               bordered={false}
@@ -78,6 +82,44 @@ const Home = () => {
                   />
                 </div>
               </div>
+            </Card>
+          </Col>
+        </Row>
+
+        <Row gutter={[16, 16]} justify="center">
+          <Col xs={{ span: 12 }} md={{ span: 8 }} lg={{ span: 3 }}>
+            <Card title="Card title" bordered={false}>
+              Card content
+            </Card>
+          </Col>
+          <Col xs={{ span: 12 }} md={{ span: 8 }} lg={{ span: 3 }}>
+            <Card title="Card title" bordered={false}>
+              Card content
+            </Card>
+          </Col>
+          <Col xs={{ span: 12 }} md={{ span: 8 }} lg={{ span: 3 }}>
+            <Card title="Card title" bordered={false}>
+              Card content
+            </Card>
+          </Col>
+          <Col xs={{ span: 12 }} md={{ span: 8 }} lg={{ span: 3 }}>
+            <Card title="Card title" bordered={false}>
+              Card content
+            </Card>
+          </Col>
+          <Col xs={{ span: 12 }} md={{ span: 8 }} lg={{ span: 3 }}>
+            <Card title="Card title" bordered={false}>
+              Card content
+            </Card>
+          </Col>
+          <Col xs={{ span: 12 }} md={{ span: 8 }} lg={{ span: 3 }}>
+            <Card title="Card title" bordered={false}>
+              Card content
+            </Card>
+          </Col>
+          <Col xs={{ span: 12 }} md={{ span: 8 }} lg={{ span: 3 }}>
+            <Card title="Card title" bordered={false}>
+              Card content
             </Card>
           </Col>
         </Row>
