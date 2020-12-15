@@ -10,6 +10,14 @@
   min-height: calc(100vh - 137px);
   overflow: hidden;
   padding: 30px;
+  .weather-details-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
   .current-temperature {
     display: flex;
     flex-direction: column;
