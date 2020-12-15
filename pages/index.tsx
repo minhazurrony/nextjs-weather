@@ -1,7 +1,95 @@
-import { Button } from 'antd';
+import {
+  faCloud,
+  faCloudRain,
+  faSun,
+  faTemperatureHigh,
+  faTint,
+  faWind,
+} from '@fortawesome/free-solid-svg-icons';
+import { Card, Col, Layout, Row } from 'antd';
+import '../styles/home.less';
+import WeatherDetails from './components/WeatherDetails';
+
+const { Header, Content, Footer } = Layout;
 
 const Home = () => {
-  return <Button type="primary">Click to Fuck Me</Button>;
+  return (
+    <Layout>
+      <Header className="header">
+        <h1>Weather</h1>
+      </Header>
+      <Content className="content">
+        <Row gutter={[24, 24]}>
+          <Col md={{ span: 12, offset: 6 }}>
+            <Card
+              title="Jessore, Khulna, Bangladesh Weather"
+              bordered={false}
+              hoverable={true}
+              extra={<p>Updated at 7:30 PM</p>}
+            >
+              <div
+                style={{
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                }}
+              >
+                <div>
+                  <WeatherDetails
+                    title="Wind"
+                    iconName={faWind}
+                    value={{ valueOne: 'NNW', valueTwo: '8 km/h' }}
+                  />
+
+                  <WeatherDetails
+                    title="Humidity"
+                    iconName={faTint}
+                    value={{ valueOne: '40%' }}
+                  />
+                  <WeatherDetails
+                    title="Precipitation"
+                    iconName={faCloudRain}
+                    value={{ valueOne: '0.0 mm/h' }}
+                  />
+                </div>
+                <div className="current-temperature">
+                  <img
+                    src="http://cdn.weatherapi.com/weather/64x64/day/116.png"
+                    alt="weather"
+                  />
+                  <h1>24 &deg;</h1>
+                  <p>Partly Cloudy</p>
+                </div>
+                <div>
+                  <WeatherDetails
+                    title="UV"
+                    iconName={faSun}
+                    value={{ valueOne: '7.0' }}
+                  />
+                  <WeatherDetails
+                    title="Cloud"
+                    iconName={faCloud}
+                    value={{ valueOne: '4' }}
+                  />
+                  <WeatherDetails
+                    title="Feels Like"
+                    iconName={faTemperatureHigh}
+                    value={{ valueOne: '25.9' }}
+                  />
+                </div>
+              </div>
+            </Card>
+          </Col>
+        </Row>
+      </Content>
+      <Footer className="footer">
+        Powered by{' '}
+        <a href="https://www.weatherapi.com/" title="Free Weather API">
+          WeatherAPI.com
+        </a>
+      </Footer>
+    </Layout>
+  );
 };
 
 export default Home;
